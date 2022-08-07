@@ -55,7 +55,7 @@ __asm__("movl %%eax,%%cr3"::"a" (0))
 // 分页内存15 MB，主内存区最多15M.
 #define PAGING_MEMORY (15*1024*1024)
 // 分页后的物理内存页面数（3840）
-#define PAGING_PAGES (PAGING_MEMORY>>12)
+#define PAGING_PAGES (PAGING_MEMORY>>12)//页面大小 4K = 2^12
 // 指定地址映射为页号
 #define MAP_NR(addr) (((addr)-LOW_MEM)>>12)
 // 页面被占用标志.
